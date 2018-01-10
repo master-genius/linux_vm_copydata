@@ -21,12 +21,18 @@
         <?php
 
             $file = '/tmp/datatmp';
-
+            $data = '';
             if (file_exists($file)) {
                 $data = file_get_contents($file);
-                echo str_replace("\n",'<br>',$data);
             }
 
+            if (empty($data)) {
+                $data = '<div style="text-align:center;margin-top:5rem;">'.
+                    '<p style="font-size:145%;color:#696969">'.
+                        '-*-  N o t h i n g  -*-' .     
+                    '</p></div>';
+            }
+            echo str_replace("\n",'<br>',$data);
         ?>
         </div>
     </div>
