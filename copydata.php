@@ -36,6 +36,7 @@
 <div class="container" style="z-index:10;position:fixed;background:#ffffff;bottom:0;">
     <div class="row">
         <div class="small-12 column">
+            <div style="font-size:85%;color:#696969;" id="send-ret-tip"></div>
             <form onsubmit="return false;">
                 <input type="text" value="" id="send-content">
                 <input type="submit" class="button hollow small" value="submit" onclick="ajax_send_data()">
@@ -62,10 +63,14 @@
             success:function(xr){
                 if (xr=='ok') {
                     brutal.autod('#send-content','');
-                    alert('ok');
+                    brutal.autod('#send-ret-tip','ok');
+
                 } else {
-                    alert(xr);
+                    brutal.autod('#send-ret-tip',xr);
                 }
+                setTimeout(function(){
+                    brutal.autod('#send-ret-tip','');
+                },2000);
             }
         });
     }
