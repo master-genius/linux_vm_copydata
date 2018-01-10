@@ -32,6 +32,7 @@
                         '-*-  N o t h i n g  -*-' .     
                     '</p></div>';
             }
+            $data = str_replace(" ", "&nbsp;", $data);
             echo str_replace("\n",'<br>',$data);
         ?>
         </div>
@@ -51,6 +52,7 @@
                 </button>
 
             </form>
+            <br>
         </div>
     </div>
 </div>
