@@ -38,21 +38,25 @@
         </div>
     </div>
     <p>&nbsp;<p>&nbsp;</p></p>
-    <br><br><br><br>
+    <br>
 </div>
 <div class="container" style="z-index:10;position:fixed;background:#ffffff;bottom:0;">
     <div class="row">
-        <div class="small-12 column">
+        <div class="small-12 column" style="margin-bottom: .2rem;">
             <div style="font-size:85%;color:#696969;" id="send-ret-tip"></div>
             <form onsubmit="return false;">
-                <input type="text" value="" id="send-content">
-                <input type="submit" class="button hollow small" value="submit" onclick="ajax_send_data()">
-                <button class="button alert small" onclick="ajax_send_data('sendadd')">
-                    Add-data
-                </button>
+                <div class="input-group">
+                    <input type="text" value="" id="send-content" class="input-group-field">
+                    <div class="input-group-button">
+                        <input type="submit" class="button hollow small" value="submit" onclick="ajax_send_data()">
+                        &nbsp;
+                        <button class="button alert small" onclick="ajax_send_data('sendadd')">
+                            Add-data
+                        </button>
+                    </div>
+                </div>
 
             </form>
-            <br>
         </div>
     </div>
 </div>
